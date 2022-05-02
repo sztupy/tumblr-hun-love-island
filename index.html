@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tumblr Szerelemsziget Térkép</title>
+      <meta charset="UTF-8">
+      <meta property="og:title" content="Tumblr Szerelemsziget Térkép" />
+      <meta property="og:image" content="https://sztupy.hu/tumblr-hun-love-island/example.jpg" />
+      <meta property="og:url" content="https://sztupy.hu/tumblr-hun-love-island/" />
+      <meta property="og:description" content="Tumblr Szerelemsziget Térkép" />
+      <style>
+        html {
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #openseadragon1 {
+          background-color: #dce2ff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+      </style>
+    </head>
+    <body>
+        <div id="openseadragon1"></div>
+        <script src="openseadragon/openseadragon.min.js"></script>
+        <script type="text/javascript">
+            var viewer = OpenSeadragon({
+                id: "openseadragon1",
+                prefixUrl: "openseadragon/images/",
+                showNavigator:  true,
+                maxZoomPixelRatio: 4,
+                navigatorBackground: '#DCE2FF',
+                tileSources: {
+                    "Image": {
+                        "xmlns":    "http://schemas.microsoft.com/deepzoom/2008",
+                        "Format":   "gif",
+                        "Overlap":  "1",
+                        "TileSize": "255",
+                        "Url": "tiles/",
+                        "Size": {
+                            "Height": "21821",
+                            "Width":  "22590"
+                        }
+                    }
+                }
+            });
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-9404141-8', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
