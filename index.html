@@ -39,6 +39,14 @@
           display: block;
           color: black;
           text-decoration: none;
+          text-align: center;
+          border: 1px solid black;
+          padding: 0.5em;          
+        }
+        #searchbox a:hover {
+          display: block;
+          color: black;
+          background-color: lightgray;
         }
         #searchboxopener {
           position: absolute;
@@ -48,12 +56,14 @@
           z-index: 2;
           padding: 0.5em;
           cursor: pointer;
+          background-color: white;
+          border: 1px solid black;
         }
       </style>
     </head>
     <body>
         <div id="openseadragon1"></div>
-        <div id="searchbox"></div>
+        <div id="searchbox"><p><b>2023-as Tumbli crushtérkép.</b></p><p><a href="2022">A 2022-es térkép itt található</a></p><p>Térképen fellelhető blogok listája:</p></div>
         <div id="searchboxopener">🔍</div>
         <script src="openseadragon/openseadragon.min.js"></script>
         <script src="blogs.js"></script>
@@ -69,11 +79,11 @@
                         "xmlns":    "http://schemas.microsoft.com/deepzoom/2008",
                         "Format":   "gif",
                         "Overlap":  "1",
-                        "TileSize": "255",
+                        "TileSize": "254",
                         "Url": "tiles/",
                         "Size": {
-                            "Height": "21821",
-                            "Width":  "22590"
+                            "Height": "27328",
+                            "Width":  "28637"
                         }
                     }
                 }
