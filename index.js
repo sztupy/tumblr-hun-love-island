@@ -34,12 +34,18 @@ function loadDZI() {
     return layer;
 }
 
+var layer = loadDZI();
+var layer2 = loadDZI();
+
+const overviewMapControl = new ol.control.OverviewMap({
+    layers: [layer2]
+});
+
 var map = new ol.Map({
+    controls: ol.control.defaults.defaults().extend([overviewMapControl]),
     target: 'map',
     logo: false
 });
-
-var layer = loadDZI();
 
 map.setView(
     new ol.View({
@@ -70,3 +76,12 @@ for (const blog in blogs) {
   }
   searchBox.appendChild(child);
 }
+
+setTimeout(function(){
+    overviewMapControl.setCollapsed(false);
+    overviewMapControl.setCollapsible(false);
+
+    let ovMap = overviewMapControl.getOverviewMap();
+    ovMap.getView().setMinZoom(10);
+    ovMap.getView().setMaxZoom(10);
+},1000);

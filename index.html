@@ -7,6 +7,7 @@
       <meta property="og:image" content="https://sztupy.hu/tumblr-hun-love-island/example.jpg" />
       <meta property="og:url" content="https://sztupy.hu/tumblr-hun-love-island/" />
       <meta property="og:description" content="Tumblr Szerelemsziget Térkép" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">    
       <style>
         html {
           height: 100%;
@@ -26,7 +27,7 @@
         #searchbox {
           position: absolute;
           bottom: 0;
-          left: 0;
+          right: 0;
           top: 0;
           overflow: scroll;
           z-index: 2;
@@ -51,7 +52,7 @@
         #searchboxopener {
           position: absolute;
           bottom: 1em;
-          left: 1em;
+          right: 1em;
           overflow: none;
           z-index: 2;
           padding: 1em;
@@ -59,15 +60,18 @@
           background-color: white;
           border: 1px solid black;
         }
+        .ol-overviewmap .ol-overviewmap-map {
+          width: 220px;
+          height: 220px;
+        }
       </style>
     </head>
     <body>
         <div id="map"></div>
         <div id="searchbox"><p><b>2023-as Tumbli crushtérkép.</b></p><p><a href="2022">A 2022-es térkép itt található</a></p><p>Térképen fellelhető blogok listája:</p></div>
         <div id="searchboxopener">🔍</div>
-        <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">        
-        <script src="blogs.js"></script>
-        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>    
+        <script src="blogs.js?1"></script>
+        <script src="index.js?1 "></script>
     </body>
 </html>
