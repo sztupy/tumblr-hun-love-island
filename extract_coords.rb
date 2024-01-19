@@ -22,8 +22,8 @@ ARGF.each_line do |line|
 
     data << [
       name,
-      (x + translate_x)/svg_width,
-      (y + translate_y)/svg_width
+      (x + translate_x),
+      (y + translate_y)
     ]
   end
 end
